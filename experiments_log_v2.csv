@@ -566,3 +566,36 @@ base
 + brightness_std
 + brightness_range
 - alpha",,Windows-10-10.0.26200-SP0
+2026-06-07 18:08:08,0.96469,LightGBM,Mean BalAcc = None,"delta = 1040300
+redshift = 893707
+u = 878653
+z = 835947
+g = 820810
+sin_alpha = 794690
+cos_alpha = 792554
+r = 772790
+i = 755427
+galaxy_population = 19018
+spectral_type = 15425","redshift = 64.34M (51.4%)
+spectral_type = 16.26M (13.0%)
+z = 10.37M (8.3%)
+g = 8.71M (7.0%)
+u = 6.48M (5.2%)
+galaxy_population = 3.55M (2.8%)
+i = 3.52M (2.8%)
+delta = 3.48M (2.8%)
+cos_alpha = 2.89M (2.3%)
+r = 2.86M (2.3%)
+sin_alpha = 2.82M (2.2%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.005
+max_depth = 15
+min_child_samples = 5
+n_estimators = 10000
+num_leaves = 255
+subsample = 0.8","MAX_COMPLEX_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ redshift_bin
+- alpha","MAX_COMPLEX_PARAMS (depth=15, leaves=255, n_est=10000, lr=0.005) на лучших признаках. Kaggle упал на 0.00098 (0.96469). Чрезмерное усложнение модели привело к переобучению на шуме: полезная важность sin_alpha/cos_alpha размылась до 2.2%. Эксперимент подтвердил, что FINAL_PARAMS (depth=10, leaves=63, n_est=2000) являются оптимальными для этого датасета.",Windows-10-10.0.26200-SP0
