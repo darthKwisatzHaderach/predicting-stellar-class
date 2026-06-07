@@ -1,4 +1,4 @@
-timestamp,Kaggle Score,model,K-Fold,feature_importance_split,feature_importance_gain,params,features,description
+timestamp,Kaggle Score,model,K-Fold,feature_importance_split,feature_importance_gain,params,features,description,os_full
 2026-06-07 10:21:50,0.96328,LightGBM,"Mean BalAcc = 0.9634 ± 0.0011
 Min = 0.9620
 Max = 0.9645
@@ -28,7 +28,7 @@ max_depth = 8
 min_child_samples = 20
 n_estimators = 500
 num_leaves = 31
-subsample = 0.8",base,Базовый набор признаков. Стабильный baseline. Доминирует u (56%).
+subsample = 0.8",base,Базовый набор признаков. Стабильный baseline. Доминирует u (56%).,MacOS
 2026-06-07 10:28:59,0.96357,LightGBM,"Mean BalAcc = 0.9621 ± 0.0001
 Min = 0.9619
 Max = 0.9622
@@ -61,7 +61,7 @@ min_child_samples = 20
 n_estimators = 500
 num_leaves = 31
 subsample = 0.8","base
-redshift_log",Добавлен redshift_log. Дублирование с redshift вызвало нестабильность важности (u упал до 6%). K-Fold ухудшился.
+redshift_log",Добавлен redshift_log. Дублирование с redshift вызвало нестабильность важности (u упал до 6%). K-Fold ухудшился.,MacOS
 2026-06-07 10:40:55,0.96243,LightGBM,"Mean BalAcc = 0.9640 ± 0.0008
 Min = 0.9631
 Max = 0.9649
@@ -92,7 +92,7 @@ min_child_samples = 20
 n_estimators = 500
 num_leaves = 31
 subsample = 0.8","base
-redshift_log (drop redshift)","Замена redshift на redshift_log. Kaggle упал, K-Fold вырос. Подозрительный перекос: delta доминирует (42%), вероятно, переобучение на координатах."
+redshift_log (drop redshift)","Замена redshift на redshift_log. Kaggle упал, K-Fold вырос. Подозрительный перекос: delta доминирует (42%), вероятно, переобучение на координатах.",MacOS
 2026-06-07 10:55:16,0.96256,LightGBM,"Mean BalAcc = 0.9628 ± 0.0015
 Min = 0.9607
 Max = 0.9643
@@ -125,7 +125,7 @@ min_child_samples = 20
 n_estimators = 500
 num_leaves = 31
 subsample = 0.8","base
-color_gr",Добавлен color_gr. Оба K-Fold и Kaggle ухудшились. Важность u рухнула с 56% до 5.5% — дублирование информации (color_gr = g - r) запутало модель.
+color_gr",Добавлен color_gr. Оба K-Fold и Kaggle ухудшились. Важность u рухнула с 56% до 5.5% — дублирование информации (color_gr = g - r) запутало модель.,MacOS
 2026-06-07 11:02:49,0.96309,LightGBM,"Mean BalAcc = 0.9634 ± 0.0012
 Min = 0.9618
 Max = 0.9648
@@ -158,7 +158,7 @@ min_child_samples = 20
 n_estimators = 500
 num_leaves = 31
 subsample = 0.8","base
-coord_dist","Добавлен coord_dist. K-Fold не изменился (0.9634), Kaggle в пределах шума. Важность перераспределилась: alpha вырос до 31.9%, coord_dist занял 2-е место (23.5%), u рухнул до 4.1%. Признак дублирует информацию от alpha/delta, прироста не даёт."
+coord_dist","Добавлен coord_dist. K-Fold не изменился (0.9634), Kaggle в пределах шума. Важность перераспределилась: alpha вырос до 31.9%, coord_dist занял 2-е место (23.5%), u рухнул до 4.1%. Признак дублирует информацию от alpha/delta, прироста не даёт.",MacOS
 2026-06-07 11:13:59,0.95049,LightGBM,"Mean BalAcc = 0.9495 ± 0.0002
 Min = 0.9493
 Max = 0.9497
@@ -186,4 +186,383 @@ n_estimators = 500
 num_leaves = 31
 subsample = 0.8","base
 drop alpha
-drop delta","Удалены alpha и delta. Значительное падение: Kaggle -0.01279 (0.95049), K-Fold -0.0139 (0.9495). galaxy_population доминирует (52.5%), но не компенсирует потерю координат. Координаты критически важны."
+drop delta","Удалены alpha и delta. Значительное падение: Kaggle -0.01279 (0.95049), K-Fold -0.0139 (0.9495). galaxy_population доминирует (52.5%), но не компенсирует потерю координат. Координаты критически важны.",MacOS
+2026-06-07 12:52:09,,LightGBM,"Mean BalAcc = 0.9627 ± 0.0009
+Min = 0.9615
+Max = 0.9637
+OOF BalAcc = 0.9627
+Time (sec) = 43.8","delta = 6905
+alpha = 6802
+redshift = 6009
+u = 5596
+z = 5136
+g = 4946
+r = 4614
+i = 4246
+spectral_type = 383
+galaxy_population = 363","delta = 655.49M (34.1%)
+g = 632.15M (32.9%)
+z = 184.02M (9.6%)
+u = 161.22M (8.4%)
+i = 154.23M (8.0%)
+r = 50.41M (2.6%)
+redshift = 48.26M (2.5%)
+alpha = 35.79M (1.9%)
+spectral_type = 603.17K (0.0%)
+galaxy_population = 453.69K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","Performance test:
+Used GPU
+base","Тест на GPU (Windows). K-Fold 0.9627. Важность нестабильна: delta доминирует (34.1%), g на 2-м месте (32.9%), u упал до 8.4%. Недетерминированность GPU.",Windows-10-10.0.26200-SP0
+2026-06-07 12:55:09,,LightGBM,"Mean BalAcc = 0.9636 ± 0.0009
+Min = 0.9624
+Max = 0.9645
+OOF BalAcc = 0.9636
+Time (sec) = 24.1","delta = 6686
+redshift = 6549
+alpha = 6514
+u = 5543
+z = 5241
+g = 4785
+r = 4701
+i = 4207
+spectral_type = 398
+galaxy_population = 375","u = 5.54B (57.8%)
+redshift = 975.72M (10.2%)
+r = 746.02M (7.8%)
+z = 622.07M (6.5%)
+i = 585.72M (6.1%)
+alpha = 571.96M (6.0%)
+delta = 413.83M (4.3%)
+g = 99.93M (1.0%)
+galaxy_population = 36.71M (0.4%)
+spectral_type = 603.21K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8",base,"Тест на CPU (Windows). K-Fold 0.9636. Важность стабильна: u доминирует (57.8%), как в baseline на macOS. CPU даёт детерминированный результат.",Windows-10-10.0.26200-SP0
+2026-06-07 12:55:55,,LightGBM,"Mean BalAcc = 0.9636 ± 0.0009
+Min = 0.9624
+Max = 0.9645
+OOF BalAcc = 0.9636
+Time (sec) = 26.4","delta = 6686
+redshift = 6549
+alpha = 6514
+u = 5543
+z = 5241
+g = 4785
+r = 4701
+i = 4207
+spectral_type = 398
+galaxy_population = 375","u = 5.54B (57.8%)
+redshift = 975.72M (10.2%)
+r = 746.02M (7.8%)
+z = 622.07M (6.5%)
+i = 585.72M (6.1%)
+alpha = 571.96M (6.0%)
+delta = 413.83M (4.3%)
+g = 99.93M (1.0%)
+galaxy_population = 36.71M (0.4%)
+spectral_type = 603.21K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8",base,Повторный тест на CPU (Windows). K-Fold 0.9636. Результат бит-в-бит идентичен предыдущему (u=57.8%). Подтверждение полной детерминированности CPU при одинаковом random_state.,Windows-10-10.0.26200-SP0
+2026-06-07 12:57:24,,LightGBM,"Mean BalAcc = 0.9613 ± 0.0017
+Min = 0.9593
+Max = 0.9634
+OOF BalAcc = 0.9613
+Time (sec) = 44.2","delta = 6662
+alpha = 6641
+redshift = 6425
+u = 5485
+z = 5343
+g = 4815
+r = 4547
+i = 4344
+galaxy_population = 371
+spectral_type = 367","g = 360.33M (38.7%)
+u = 242.70M (26.1%)
+r = 102.12M (11.0%)
+alpha = 93.57M (10.1%)
+redshift = 67.17M (7.2%)
+z = 28.02M (3.0%)
+i = 18.81M (2.0%)
+delta = 15.66M (1.7%)
+galaxy_population = 1.20M (0.1%)
+spectral_type = 603.49K (0.1%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","Performance test:
+Used GPU
+base","Повторный тест на GPU (Windows). K-Fold 0.9613. Важность снова другая: g доминирует (38.7%), u на 2-м месте (26.1%). GPU недетерминирован в feature importance из-за неассоциативности float-операций и atomicAdd в гистограммах.",Windows-10-10.0.26200-SP0
+2026-06-07 13:12:03,0.96507,LightGBM,"Mean BalAcc = 0.9631 ± 0.0008
+Min = 0.9624
+Max = 0.9643
+OOF BalAcc = 0.9631
+Time (sec) = 28.4","delta = 6965
+redshift = 5290
+sin_alpha = 5176
+u = 5024
+cos_alpha = 4708
+z = 4691
+g = 4362
+r = 4107
+i = 3880
+spectral_type = 455
+galaxy_population = 342","r = 5.54M (29.4%)
+redshift = 3.77M (20.0%)
+sin_alpha = 2.39M (12.6%)
+cos_alpha = 1.64M (8.7%)
+u = 1.21M (6.4%)
+z = 1.05M (5.6%)
+delta = 920.52K (4.9%)
+spectral_type = 765.45K (4.1%)
+g = 710.33K (3.8%)
+i = 662.14K (3.5%)
+galaxy_population = 217.57K (1.2%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+sin_alpha
+cos_alpha
+drop alpha","Замена alpha на sin_alpha и cos_alpha. Kaggle улучшился на 0.00179 (0.96507) — первый реальный прирост! sin_alpha + cos_alpha дали 21.3% важности (vs 6.3% у alpha). K-Fold в пределах шума (-0.0003). u снова упал до 6.4%, но общий результат лучше.",Windows-10-10.0.26200-SP0
+2026-06-07 13:23:42,0.96567,LightGBM,"Mean BalAcc = 0.9649 ± 0.0004
+Min = 0.9643
+Max = 0.9656
+OOF BalAcc = 0.9649
+Time (sec) = 192.6","delta = 53846
+redshift = 45198
+u = 42385
+sin_alpha = 39767
+cos_alpha = 39617
+z = 39363
+g = 38259
+r = 35313
+i = 34562
+galaxy_population = 1899
+spectral_type = 1791","redshift = 11.08M (53.7%)
+spectral_type = 3.07M (14.9%)
+z = 1.72M (8.3%)
+g = 1.38M (6.7%)
+u = 1.02M (4.9%)
+delta = 466.63K (2.3%)
+cos_alpha = 419.22K (2.0%)
+sin_alpha = 389.32K (1.9%)
+i = 386.98K (1.9%)
+galaxy_population = 380.04K (1.8%)
+r = 337.14K (1.6%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
+- alpha","Финальная модель (n_estimators=2000, max_depth=10). Лучший результат: Kaggle 0.96567 (+0.00239 vs base), K-Fold 0.9649 ± 0.0004. redshift доминирует (53.7%), spectral_type вырос до 14.9%. Модель стала глубже и лучше использует признаки. Распределение важности сбалансированное.",Windows-10-10.0.26200-SP0
+2026-06-07 13:40:39,,LightGBM,"Mean BalAcc = 0.9646 ± 0.0003
+Min = 0.9641
+Max = 0.9650
+OOF BalAcc = 0.9646
+Time (sec) = 263.2","delta = 41488
+redshift = 35552
+sin_alpha = 32496
+cos_alpha = 31791
+color_gr = 27982
+color_ug = 27026
+color_rz = 24496
+color_ri = 23969
+u = 23794
+color_iz = 22596
+g = 21211
+z = 20774
+i = 19437
+r = 18230
+galaxy_population = 677
+spectral_type = 481","redshift = 10.70M (51.7%)
+color_gr = 3.28M (15.8%)
+color_rz = 1.34M (6.5%)
+color_ug = 1.08M (5.2%)
+g = 811.09K (3.9%)
+z = 749.49K (3.6%)
+u = 509.71K (2.5%)
+delta = 392.81K (1.9%)
+cos_alpha = 378.54K (1.8%)
+sin_alpha = 360.95K (1.7%)
+spectral_type = 310.45K (1.5%)
+i = 279.08K (1.3%)
+color_ri = 182.59K (0.9%)
+r = 161.26K (0.8%)
+galaxy_population = 97.55K (0.5%)
+color_iz = 72.07K (0.3%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ color_gr
++ color_rz
++ color_ug
++ color_ri
++ color_iz
+- alpha","Добавлены все цветовые индексы (color_gr, color_rz, color_ug, color_ri, color_iz). K-Fold упал на 0.0003 (в пределах шума). color_gr занял 2-е место (15.8%), но spectral_type рухнул с 14.9% до 1.5%. Мультиколлинеарность цветов с сырыми величинами подавляет важные признаки. Прироста нет.",Windows-10-10.0.26200-SP0
+2026-06-07 13:46:35,,LightGBM,"Mean BalAcc = 0.9585 ± 0.0005
+Min = 0.9580
+Max = 0.9594
+OOF BalAcc = 0.9585
+Time (sec) = 187.0","delta = 54986
+redshift = 44950
+color_gr = 44130
+color_ug = 43347
+sin_alpha = 39294
+cos_alpha = 38992
+color_rz = 36205
+color_ri = 35332
+color_iz = 32899
+galaxy_population = 1174
+spectral_type = 691","redshift = 11.22M (55.1%)
+color_gr = 3.74M (18.4%)
+color_rz = 1.73M (8.5%)
+color_ug = 1.45M (7.1%)
+delta = 563.69K (2.8%)
+cos_alpha = 434.21K (2.1%)
+sin_alpha = 380.60K (1.9%)
+spectral_type = 365.04K (1.8%)
+color_ri = 324.76K (1.6%)
+color_iz = 111.85K (0.5%)
+galaxy_population = 51.21K (0.3%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ color_gr
++ color_rz
++ color_ug
++ color_ri
++ color_iz
+- alpha
+- u
+- g
+- z
+- i
+- r","Удалены сырые величины u,g,r,i,z, оставлены только цвета. Катастрофа: K-Fold упал на 0.0064 (0.9585). Цвета не несут информацию об абсолютной яркости, которая критична для классификации. spectral_type снова подавлен (1.8%). Сырые величины обязательны.",Windows-10-10.0.26200-SP0
+2026-06-07 14:02:33,0.96572,LightGBM,"Mean BalAcc = 0.9648 ± 0.0002
+Min = 0.9646
+Max = 0.9650
+OOF BalAcc = 0.9648
+Time (sec) = 261.0","delta = 53896
+redshift = 44474
+u = 42859
+sin_alpha = 39819
+cos_alpha = 39171
+z = 38896
+g = 37820
+r = 35262
+i = 34011
+redshift_bin = 2104
+galaxy_population = 1892
+spectral_type = 1796","redshift = 10.88M (52.7%)
+spectral_type = 3.33M (16.1%)
+z = 1.54M (7.5%)
+g = 1.25M (6.1%)
+u = 864.11K (4.2%)
+redshift_bin = 824.59K (4.0%)
+delta = 463.84K (2.2%)
+cos_alpha = 392.78K (1.9%)
+sin_alpha = 368.39K (1.8%)
+i = 310.61K (1.5%)
+r = 256.52K (1.2%)
+galaxy_population = 149.23K (0.7%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ redshift_bin
+- alpha",Добавлен redshift_bin. Kaggle улучшился на 0.00005 (0.96572) — в пределах шума. Биннинг не даёт новой информации, redshift уже оптимально используется моделью.
+2026-06-07 14:13:26,,LightGBM,"Mean BalAcc = 0.9648 ± 0.0005
+Min = 0.9640
+Max = 0.9652
+OOF BalAcc = 0.9648
+Time (sec) = 345.7","delta = 47365
+redshift = 41448
+sin_alpha = 36947
+cos_alpha = 36290
+g = 31966
+z = 29623
+r = 28968
+i = 26159
+u = 25997
+brightness_std = 24356
+brightness_range = 22639
+total_brightness = 17082
+spectral_type = 1246
+brightness_mean = 1132
+galaxy_population = 782","redshift = 11.44M (55.4%)
+brightness_std = 4.05M (19.6%)
+brightness_range = 1.19M (5.7%)
+g = 1.14M (5.5%)
+z = 687.59K (3.3%)
+delta = 446.06K (2.2%)
+cos_alpha = 400.79K (1.9%)
+sin_alpha = 375.29K (1.8%)
+r = 243.92K (1.2%)
+i = 225.58K (1.1%)
+spectral_type = 199.49K (1.0%)
+u = 183.34K (0.9%)
+total_brightness = 64.63K (0.3%)
+galaxy_population = 13.67K (0.1%)
+brightness_mean = 3.72K (0.0%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ total_brightness
++ brightness_mean
++ brightness_std
++ brightness_range
+- alpha",,Windows-10-10.0.26200-SP0
