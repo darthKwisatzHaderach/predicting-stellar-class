@@ -1,0 +1,189 @@
+timestamp,Kaggle Score,model,K-Fold,feature_importance_split,feature_importance_gain,params,features,description
+2026-06-07 10:21:50,0.96328,LightGBM,"Mean BalAcc = 0.9634 ± 0.0011
+Min = 0.9620
+Max = 0.9645
+OOF BalAcc = 0.9634
+Time (sec) = 36.3","redshift = 6607
+delta = 6522
+alpha = 6479
+u = 5634
+z = 5291
+g = 4774
+r = 4675
+i = 4248
+spectral_type = 386
+galaxy_population = 381","u = 5.51B (56.2%)
+redshift = 959.12M (9.8%)
+r = 812.75M (8.3%)
+z = 674.57M (6.9%)
+i = 644.66M (6.6%)
+alpha = 619.51M (6.3%)
+delta = 376.97M (3.8%)
+g = 194.50M (2.0%)
+galaxy_population = 17.67M (0.2%)
+spectral_type = 603.13K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8",base,Базовый набор признаков. Стабильный baseline. Доминирует u (56%).
+2026-06-07 10:28:59,0.96357,LightGBM,"Mean BalAcc = 0.9621 ± 0.0001
+Min = 0.9619
+Max = 0.9622
+OOF BalAcc = 0.9621
+Time (sec) = 37.4","alpha = 6604
+redshift = 6444
+delta = 6407
+u = 5237
+g = 5027
+z = 5005
+r = 4343
+i = 3931
+redshift_log = 1194
+spectral_type = 405
+galaxy_population = 357","i = 274.15M (23.9%)
+g = 184.21M (16.0%)
+redshift = 158.46M (13.8%)
+alpha = 136.40M (11.9%)
+delta = 121.67M (10.6%)
+r = 113.82M (9.9%)
+z = 78.71M (6.8%)
+u = 67.18M (5.8%)
+redshift_log = 11.50M (1.0%)
+galaxy_population = 2.12M (0.2%)
+spectral_type = 860.02K (0.1%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+redshift_log",Добавлен redshift_log. Дублирование с redshift вызвало нестабильность важности (u упал до 6%). K-Fold ухудшился.
+2026-06-07 10:40:55,0.96243,LightGBM,"Mean BalAcc = 0.9640 ± 0.0008
+Min = 0.9631
+Max = 0.9649
+OOF BalAcc = 0.9640
+Time (sec) = 34.9","redshift_log = 6733
+alpha = 6626
+delta = 6307
+u = 5530
+g = 5108
+z = 5046
+r = 4757
+i = 4116
+galaxy_population = 394
+spectral_type = 374","delta = 7.38B (42.0%)
+redshift_log = 4.03B (22.9%)
+u = 2.89B (16.4%)
+r = 1.17B (6.7%)
+z = 1.04B (5.9%)
+g = 434.99M (2.5%)
+alpha = 315.20M (1.8%)
+i = 289.80M (1.6%)
+galaxy_population = 40.87M (0.2%)
+spectral_type = 932.56K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+redshift_log (drop redshift)","Замена redshift на redshift_log. Kaggle упал, K-Fold вырос. Подозрительный перекос: delta доминирует (42%), вероятно, переобучение на координатах."
+2026-06-07 10:55:16,0.96256,LightGBM,"Mean BalAcc = 0.9628 ± 0.0015
+Min = 0.9607
+Max = 0.9643
+OOF BalAcc = 0.9628
+Time (sec) = 36.0","redshift = 6499
+delta = 6349
+alpha = 6247
+u = 5355
+z = 4572
+g = 4345
+r = 3984
+color_gr = 3667
+i = 3551
+galaxy_population = 350
+spectral_type = 78","r = 715.35M (21.7%)
+g = 652.76M (19.8%)
+redshift = 599.46M (18.2%)
+alpha = 470.03M (14.2%)
+z = 275.46M (8.3%)
+color_gr = 204.93M (6.2%)
+u = 182.06M (5.5%)
+delta = 109.70M (3.3%)
+i = 88.47M (2.7%)
+galaxy_population = 1.64M (0.0%)
+spectral_type = 353.52K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+color_gr",Добавлен color_gr. Оба K-Fold и Kaggle ухудшились. Важность u рухнула с 56% до 5.5% — дублирование информации (color_gr = g - r) запутало модель.
+2026-06-07 11:02:49,0.96309,LightGBM,"Mean BalAcc = 0.9634 ± 0.0012
+Min = 0.9618
+Max = 0.9648
+OOF BalAcc = 0.9634
+Time (sec) = 36.3","redshift = 6788
+delta = 6217
+u = 5230
+z = 4765
+g = 4699
+alpha = 4657
+r = 4177
+i = 3911
+coord_dist = 3771
+spectral_type = 398
+galaxy_population = 384","alpha = 544.66M (31.9%)
+coord_dist = 401.56M (23.5%)
+redshift = 351.62M (20.6%)
+i = 95.70M (5.6%)
+r = 73.49M (4.3%)
+u = 70.66M (4.1%)
+delta = 63.53M (3.7%)
+g = 55.73M (3.3%)
+z = 48.53M (2.8%)
+spectral_type = 841.85K (0.0%)
+galaxy_population = 525.02K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+coord_dist","Добавлен coord_dist. K-Fold не изменился (0.9634), Kaggle в пределах шума. Важность перераспределилась: alpha вырос до 31.9%, coord_dist занял 2-е место (23.5%), u рухнул до 4.1%. Признак дублирует информацию от alpha/delta, прироста не даёт."
+2026-06-07 11:13:59,0.95049,LightGBM,"Mean BalAcc = 0.9495 ± 0.0002
+Min = 0.9493
+Max = 0.9497
+OOF BalAcc = 0.9495
+Time (sec) = 34.4","redshift = 8060
+u = 7903
+z = 7371
+g = 7283
+r = 6850
+i = 6442
+galaxy_population = 554
+spectral_type = 537","galaxy_population = 797.27M (52.5%)
+z = 423.23M (27.9%)
+i = 109.25M (7.2%)
+r = 54.54M (3.6%)
+u = 49.24M (3.2%)
+redshift = 45.77M (3.0%)
+g = 37.97M (2.5%)
+spectral_type = 980.11K (0.1%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+subsample = 0.8","base
+drop alpha
+drop delta","Удалены alpha и delta. Значительное падение: Kaggle -0.01279 (0.95049), K-Fold -0.0139 (0.9495). galaxy_population доминирует (52.5%), но не компенсирует потерю координат. Координаты критически важны."
