@@ -517,7 +517,7 @@ base
 + sin_alpha
 + cos_alpha
 + redshift_bin
-- alpha",Добавлен redshift_bin. Kaggle улучшился на 0.00005 (0.96572) — в пределах шума. Биннинг не даёт новой информации, redshift уже оптимально используется моделью.
+- alpha",Добавлен redshift_bin. Kaggle улучшился на 0.00005 (0.96572) — в пределах шума. Биннинг не даёт новой информации , redshift уже оптимально используется моделью.
 2026-06-07 14:13:26,,LightGBM,"Mean BalAcc = 0.9648 ± 0.0005
 Min = 0.9640
 Max = 0.9652
@@ -788,3 +788,125 @@ base
 + cos_gal_b
 + cos_gal_l
 - alpha","Добавлены галактические координаты (sin_gal_l, cos_gal_l, sin_gal_b, cos_gal_b). Kaggle улучшился на 0.00052 (0.96648), K-Fold на 0.0004 (0.9650). Галактические координаты заняли места 10-15 по split, суммарный gain 3.2%. sin/cos_alpha упали с 2-3 места до 13-14 места по split (с 3.7% gain до 1.7%) — галактические координаты ""вытеснили"" их, но общий результат улучшился.",Windows-10-10.0.26200-SP0
+,0.96645,LightGBM,,,,,"FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ abs_mag_r
++ curvature_ugr
++ sin_gal_l
++ sin_gal_b
++ cos_gal_b
++ cos_gal_l
++ color_gr
++ color_rz
++ color_ug
++ color_ri
++ color_iz
+- alpha","Добавлены все цветовые индексы (color_gr, color_rz, color_ug, color_ri, color_iz). Kaggle упал на 0.00003 (0.96645), K-Fold на 0.0001 (0.9649). color_gr занял 2-е место по gain (17.2%), но это дублирование информации из g и r. spectral_type катастрофически упал с 14.3% до 0.1%. Мультиколлинеарность ухудшает модель.",macOS-15.7.7-arm64-arm-64bit-Mach-O
+2026-06-08 12:03:33,0.96572,LightGBM,"Mean BalAcc = 0.9649 ± 0.0004
+Min = 0.9646
+Max = 0.9656
+OOF BalAcc = 0.9649
+Time (sec) = 426.2","delta = 29363
+u = 28485
+z = 28399
+curvature_gri = 26663
+abs_mag_r = 26507
+curvature_ugr = 24928
+redshift = 24252
+g = 23175
+i = 22788
+sin_gal_l = 20307
+cos_gal_b = 20269
+r = 20096
+cos_alpha = 19895
+cos_gal_l = 19880
+sin_alpha = 18787
+sin_gal_b = 14902
+spectral_type = 1687
+galaxy_population = 1617","redshift = 9.06M (43.7%)
+spectral_type = 2.98M (14.4%)
+abs_mag_r = 2.43M (11.7%)
+z = 1.60M (7.7%)
+g = 1.16M (5.6%)
+u = 868.00K (4.2%)
+galaxy_population = 359.84K (1.7%)
+i = 325.52K (1.6%)
+delta = 307.84K (1.5%)
+curvature_ugr = 229.04K (1.1%)
+sin_gal_b = 217.47K (1.0%)
+r = 213.83K (1.0%)
+cos_gal_b = 192.40K (0.9%)
+cos_alpha = 180.54K (0.9%)
+curvature_gri = 180.51K (0.9%)
+sin_alpha = 173.03K (0.8%)
+cos_gal_l = 132.58K (0.6%)
+sin_gal_l = 122.63K (0.6%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ abs_mag_r
++ curvature_ugr
++ curvature_gri
+- alpha","Добавлен curvature_gri (кривизна в оптическом диапазоне g-r-i). Kaggle упал на 0.00076 (0.96572). curvature_gri занял 4-е место по split (активно используется), но gain только 0.9%. Мультиколлинеарность с curvature_ugr (обе используют g, r) создаёт избыточность. abs_mag_r вырос с 6.9% до 11.7%, но общий результат ухудшился.",macOS-15.7.7-arm64-arm-64bit-Mach-O
+2026-06-08 12:32:52,0.96591,LightGBM,"Mean BalAcc = 0.9652 ± 0.0006
+Min = 0.9643
+Max = 0.9662
+OOF BalAcc = 0.9652
+Time (sec) = 431.4","z = 30632
+u = 30193
+delta = 29928
+abs_mag_r = 27465
+curvature_ugr = 27129
+r = 25626
+redshift = 24951
+i = 24842
+g = 24486
+sin_gal_l = 19985
+cos_gal_b = 19021
+cos_alpha = 18834
+cos_gal_l = 17510
+sin_alpha = 17451
+dist_gal_center = 15849
+sin_gal_b = 14539
+spectral_type = 1792
+galaxy_population = 1767","redshift = 9.05M (43.7%)
+spectral_type = 2.98M (14.4%)
+abs_mag_r = 2.43M (11.8%)
+z = 1.64M (7.9%)
+g = 1.17M (5.6%)
+u = 882.39K (4.3%)
+galaxy_population = 362.40K (1.8%)
+i = 336.86K (1.6%)
+delta = 307.50K (1.5%)
+r = 265.65K (1.3%)
+curvature_ugr = 231.12K (1.1%)
+sin_gal_b = 215.21K (1.0%)
+cos_alpha = 176.37K (0.9%)
+cos_gal_b = 165.66K (0.8%)
+sin_alpha = 161.98K (0.8%)
+sin_gal_l = 118.92K (0.6%)
+cos_gal_l = 112.25K (0.5%)
+dist_gal_center = 90.13K (0.4%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ abs_mag_r
++ curvature_ugr
++ dist_gal_center
+- alpha","Добавлен dist_gal_center (расстояние до центра Галактики). Kaggle упал на 0.00057 (0.96591), K-Fold в пределах шума (+0.0002). dist_gal_center занял последнее место по split (15849) и gain (0.4%). Признак является детерминированной функцией от cos_gal_b и cos_gal_l, что создаёт мультиколлинеарность. Физический смысл не помог — модель уже использует эту информацию через sin/cos галактических координат.",macOS-15.7.7-arm64-arm-64bit-Mach-O
