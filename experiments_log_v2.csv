@@ -1020,4 +1020,54 @@ base
 + sin_delta
 + cos_delta
 - alpha
-- delta",,macOS-15.7.7-arm64-arm-64bit-Mach-O
+- delta","Добавлены sin_delta и cos_delta, удалены alpha и delta. Kaggle улучшился на 0.00019 (0.96667) — новый рекорд! K-Fold не изменился (+0.0001 в пределах шума). cos_delta занял 10-е место по split (активно используется), sin_delta — 16-е место. Оба признака дают вклад (0.9% gain каждый). Несмотря на то, что delta не циклический признак, sin/cos преобразование помогло модели лучше работать с нелинейностями распределения.",macOS-15.7.7-arm64-arm-64bit-Mach-O
+2026-06-08 18:09:34,0.96493,CatBoost,"Mean BalAcc = 0.9639 ± 0.0003
+Min = 0.9634
+Max = 0.9644
+OOF BalAcc = 0.9639
+Time (sec) = 1767.5","redshift = 20.12
+z = 9.40
+u = 7.17
+abs_mag_r = 6.84
+spectral_type = 6.01
+g = 5.63
+r = 5.15
+curvature_ugr = 4.60
+i = 4.44
+cos_alpha = 4.03
+cos_delta = 3.89
+sin_gal_l = 3.77
+sin_delta = 3.63
+sin_alpha = 3.25
+cos_gal_b = 3.20
+sin_gal_b = 3.08
+galaxy_population = 2.93
+cos_gal_l = 2.87","redshift = 20.12
+z = 9.40
+u = 7.17
+abs_mag_r = 6.84
+spectral_type = 6.01
+g = 5.63
+r = 5.15
+curvature_ugr = 4.60
+i = 4.44
+cos_alpha = 4.03
+cos_delta = 3.89
+sin_gal_l = 3.77
+sin_delta = 3.63
+sin_alpha = 3.25
+cos_gal_b = 3.20
+sin_gal_b = 3.08
+galaxy_population = 2.93
+cos_gal_l = 2.87","iterations = 2000
+learning_rate = 0.03
+depth = 10
+rsm = 0.9
+auto_class_weights = Balanced
+subsample = 0.9
+min_data_in_leaf = 10","FINAL_PARAMS
++ sin_alpha, cos_alpha
++ sin_delta, cos_delta
++ abs_mag_r, curvature_ugr
++ sin/cos_gal_*
+- alpha, delta","CatBoost с аналогичными признаками (но + sin_delta/cos_delta, - alpha/delta). Kaggle упал на 0.00155 (0.96493), K-Fold на 0.0011 (0.9639). Время обучения в 4 раза больше (1767 сек vs 430 сек). CatBoost хуже LightGBM по всем параметрам. Возможно, sin_delta/cos_delta ухудшили результат (delta не циклический признак).",macOS-15.7.7-arm64-arm-64bit-Mach-O
