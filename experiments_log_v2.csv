@@ -910,3 +910,59 @@ base
 + curvature_ugr
 + dist_gal_center
 - alpha","Добавлен dist_gal_center (расстояние до центра Галактики). Kaggle упал на 0.00057 (0.96591), K-Fold в пределах шума (+0.0002). dist_gal_center занял последнее место по split (15849) и gain (0.4%). Признак является детерминированной функцией от cos_gal_b и cos_gal_l, что создаёт мультиколлинеарность. Физический смысл не помог — модель уже использует эту информацию через sin/cos галактических координат.",macOS-15.7.7-arm64-arm-64bit-Mach-O
+2026-06-08 12:57:33,0.96605,LightGBM,"Mean BalAcc = 0.9650 ± 0.0005
+Min = 0.9644
+Max = 0.9659
+OOF BalAcc = 0.9650
+Time (sec) = 425.6","delta = 30106
+z = 29658
+u = 28242
+abs_mag_r = 26654
+curvature_ugr = 26037
+redshift = 25077
+r = 24512
+i = 24005
+g = 23143
+cos_gal_b = 20801
+cos_gal_l = 20476
+sin_gal_l = 19955
+cos_alpha = 19835
+sin_alpha = 18529
+sin_gal_b = 14671
+spectral_te = 10534
+galaxy_pop_te = 7923
+galaxy_population = 1485
+spectral_type = 357","redshift = 9.72M (47.0%)
+spectral_te = 3.12M (15.1%)
+abs_mag_r = 1.88M (9.1%)
+z = 1.58M (7.6%)
+g = 1.02M (4.9%)
+u = 823.61K (4.0%)
+i = 337.51K (1.6%)
+delta = 309.34K (1.5%)
+galaxy_pop_te = 230.60K (1.1%)
+r = 226.70K (1.1%)
+curvature_ugr = 209.98K (1.0%)
+sin_gal_b = 208.06K (1.0%)
+cos_gal_b = 178.69K (0.9%)
+cos_alpha = 177.52K (0.9%)
+sin_alpha = 173.78K (0.8%)
+spectral_type = 151.93K (0.7%)
+cos_gal_l = 130.39K (0.6%)
+sin_gal_l = 122.16K (0.6%)
+galaxy_population = 83.73K (0.4%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+subsample = 0.9","FINAL_PARAMS
+base
++ sin_alpha
++ cos_alpha
++ abs_mag_r
++ curvature_ugr
++ spectral_te
++ galaxy_pop_te
+- alpha","Добавлены spectral_te и galaxy_pop_te (Target Encoding для спектрального типа и популяции галактик). Kaggle упал на 0.00043 (0.96605), K-Fold не изменился. spectral_te занял 2-е место по gain (15.1%), но ""забрал"" важность у spectral_type (14.4% → 0.7%). galaxy_pop_te имеет низкий split и gain. Кодирование только одного класса (GALAXY) потеряло информацию о QSO и STAR. Откатываем оба признака.",macOS-15.7.7-arm64-arm-64bit-Mach-O
