@@ -1656,3 +1656,849 @@ STAR | 3003 | 459 | 79262","GALAXY: 0.9650 (364266/377480)
 QSO: 0.9723 (113903/117143)
 STAR: 0.9581 (79262/82724)
 BalAcc: 0.9652"
+2026-06-09 13:47:34,0.96696,LightGBM,"Mean BalAcc = 0.9651 ± 0.0003
+Min = 0.9647
+Max = 0.9657
+OOF BalAcc = 0.9651
+Time (sec) = 435.4","redshift_log = 29195
+color_rz = 26547
+color_gr = 26238
+color_ug = 25791
+color_ri = 24321
+cos_delta = 23422
+delta = 23033
+sin_alpha = 22854
+u = 22322
+cos_alpha = 22208
+z = 20736
+g = 19751
+i = 19240
+coord_x_redshift = 18084
+r = 17236
+coord_dist = 12884
+alpha = 11565
+sin_delta = 2719
+spectral_type_STAR_prob = 1303
+delta_bin = 818
+spectral_type_GALAXY_prob = 432
+galaxy_population_GALAXY_prob = 423
+alpha_bin = 384
+spectral_type_QSO_prob = 262
+galaxy_population_QSO_prob = 206
+galaxy_population_STAR_prob = 26","redshift_log = 10.56M (49.3%)
+color_gr = 3.56M (16.6%)
+color_rz = 1.28M (6.0%)
+color_ug = 1.04M (4.9%)
+coord_x_redshift = 906.23K (4.2%)
+g = 668.95K (3.1%)
+u = 614.65K (2.9%)
+z = 520.13K (2.4%)
+cos_alpha = 343.19K (1.6%)
+i = 293.92K (1.4%)
+sin_alpha = 232.02K (1.1%)
+coord_dist = 224.19K (1.0%)
+cos_delta = 213.34K (1.0%)
+delta = 210.54K (1.0%)
+color_ri = 177.76K (0.8%)
+alpha = 176.47K (0.8%)
+r = 170.57K (0.8%)
+spectral_type_GALAXY_prob = 148.16K (0.7%)
+spectral_type_QSO_prob = 28.77K (0.1%)
+sin_delta = 24.42K (0.1%)
+galaxy_population_GALAXY_prob = 19.30K (0.1%)
+delta_bin = 9.28K (0.0%)
+alpha_bin = 9.02K (0.0%)
+spectral_type_STAR_prob = 4.63K (0.0%)
+galaxy_population_QSO_prob = 1.57K (0.0%)
+galaxy_population_STAR_prob = 141.97 (0.0%)","class_weight = balanced
+colsample_bytree = 0.9
+learning_rate = 0.03
+max_depth = 10
+min_child_samples = 10
+n_estimators = 2000
+num_leaves = 63
+reg_alpha = 0.0
+reg_lambda = 0.0
+subsample = 0.9","FINAL_PARAMS
+base
++ color_indices (-iz)
++ coord_dist
++ redshift_log (-redshift)
++ sin/cos alpha, delta
++ alpha_bin, delta_bin
++ coord_x_redshift
++ target_encoding (spectral_type, galaxy_population)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 364036 | 4735 | 8709
+QSO | 2140 | 113907 | 1096
+STAR | 2976 | 462 | 79286","GALAXY: 0.9644 (364036/377480)
+QSO: 0.9724 (113907/117143)
+STAR: 0.9584 (79286/82724)
+BalAcc: 0.9651"
+2026-06-09 15:30:12,0.96713,LightGBM,"Mean BalAcc = 0.9649 ± 0.0002
+Min = 0.9646
+Max = 0.9652
+OOF BalAcc = 0.9649
+Time (sec) = 1223.7","color_gr = 79424
+color_rz = 78463
+cos_delta = 77092
+color_ug = 76684
+sin_delta = 75353
+cos_alpha = 75153
+sin_alpha = 73543
+color_ri = 69996
+u = 65670
+redshift_log = 64795
+abs_mag_r = 64126
+z = 61331
+i = 58163
+g = 56544
+coord_dist = 54060
+r = 48934
+coord_x_redshift = 48037
+spectral_type_STAR_prob = 3384
+spectral_type_GALAXY_prob = 1487
+galaxy_population_GALAXY_prob = 809
+spectral_type_QSO_prob = 719
+galaxy_population_QSO_prob = 208
+galaxy_population_STAR_prob = 20","redshift_log = 28.09M (45.8%)
+color_gr = 9.41M (15.3%)
+abs_mag_r = 5.05M (8.2%)
+color_rz = 3.66M (6.0%)
+color_ug = 2.92M (4.8%)
+z = 1.85M (3.0%)
+g = 1.64M (2.7%)
+u = 1.64M (2.7%)
+spectral_type_GALAXY_prob = 1.43M (2.3%)
+cos_alpha = 794.21K (1.3%)
+i = 707.06K (1.2%)
+sin_alpha = 682.24K (1.1%)
+coord_x_redshift = 674.93K (1.1%)
+sin_delta = 670.28K (1.1%)
+cos_delta = 629.14K (1.0%)
+coord_dist = 575.08K (0.9%)
+color_ri = 477.58K (0.8%)
+r = 343.72K (0.6%)
+galaxy_population_GALAXY_prob = 51.85K (0.1%)
+spectral_type_QSO_prob = 29.47K (0.0%)
+spectral_type_STAR_prob = 11.73K (0.0%)
+galaxy_population_QSO_prob = 5.10K (0.0%)
+galaxy_population_STAR_prob = 368.00 (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, coord_x_redshift, target_encoding
+v2: abs_mag_r, curvature_ugr, sin/cos galactic
+- redshift (raw), alpha, delta (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 363959 | 4747 | 8774
+QSO | 2121 | 113910 | 1112
+STAR | 3006 | 467 | 79251","GALAXY: 0.9642 (363959/377480)
+QSO: 0.9724 (113910/117143)
+STAR: 0.9580 (79251/82724)
+BalAcc: 0.9649"
+2026-06-09 16:16:39,0.96791,LightGBM,"Mean BalAcc = 0.9650 ± 0.0003
+Min = 0.9647
+Max = 0.9655
+OOF BalAcc = 0.9650
+Time (sec) = 1278.2","color_gr = 77762
+color_rz = 77189
+color_ug = 76245
+delta = 72460
+cos_delta = 69715
+color_ri = 69559
+cos_alpha = 66722
+sin_alpha = 65488
+u = 65395
+redshift_log = 64649
+abs_mag_r = 62487
+z = 60503
+i = 57849
+g = 55335
+r = 49185
+coord_x_redshift = 47661
+coord_dist = 38739
+alpha = 35981
+sin_delta = 10853
+spectral_type_STAR_prob = 3289
+delta_bin = 2157
+spectral_type_GALAXY_prob = 1717
+alpha_bin = 1268
+galaxy_population_GALAXY_prob = 854
+spectral_type_QSO_prob = 674
+galaxy_population_QSO_prob = 226
+galaxy_population_STAR_prob = 33","redshift_log = 29.57M (48.2%)
+color_gr = 9.21M (15.0%)
+abs_mag_r = 3.86M (6.3%)
+color_rz = 3.64M (5.9%)
+color_ug = 2.79M (4.6%)
+g = 1.78M (2.9%)
+z = 1.71M (2.8%)
+spectral_type_GALAXY_prob = 1.58M (2.6%)
+u = 1.37M (2.2%)
+coord_x_redshift = 755.11K (1.2%)
+cos_alpha = 746.98K (1.2%)
+i = 731.78K (1.2%)
+delta = 626.11K (1.0%)
+sin_alpha = 570.23K (0.9%)
+cos_delta = 562.39K (0.9%)
+color_ri = 481.48K (0.8%)
+coord_dist = 431.63K (0.7%)
+r = 378.56K (0.6%)
+alpha = 344.54K (0.6%)
+sin_delta = 91.57K (0.1%)
+galaxy_population_GALAXY_prob = 62.32K (0.1%)
+delta_bin = 26.11K (0.0%)
+alpha_bin = 21.02K (0.0%)
+spectral_type_QSO_prob = 13.68K (0.0%)
+spectral_type_STAR_prob = 11.21K (0.0%)
+galaxy_population_QSO_prob = 4.39K (0.0%)
+galaxy_population_STAR_prob = 606.61 (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 363988 | 4759 | 8733
+QSO | 2127 | 113896 | 1120
+STAR | 2980 | 458 | 79286","GALAXY: 0.9643 (363988/377480)
+QSO: 0.9723 (113896/117143)
+STAR: 0.9584 (79286/82724)
+BalAcc: 0.9650"
+2026-06-10 09:20:49,0.96642,LightGBM,"Mean BalAcc = 0.9650 ± 0.0002
+Min = 0.9648
+Max = 0.9653
+OOF BalAcc = 0.9650
+Time (sec) = 1273.8","color_rz = 74626
+delta = 71327
+color_ri = 67238
+cos_delta = 66992
+color_gr = 66037
+cos_alpha = 64513
+sin_alpha = 64025
+redshift_log = 60602
+abs_mag_r = 60509
+color_ug = 58338
+z = 57046
+g = 54639
+u = 52565
+i = 52292
+coord_x_redshift = 44431
+uv_excess_rest = 44133
+uv_excess = 43348
+r = 42221
+coord_dist = 37262
+alpha = 34451
+sin_delta = 9865
+spectral_type_STAR_prob = 2806
+delta_bin = 1855
+alpha_bin = 1227
+spectral_type_GALAXY_prob = 932
+spectral_type_QSO_prob = 506
+galaxy_population_GALAXY_prob = 66
+galaxy_population_QSO_prob = 30
+galaxy_population_STAR_prob = 8","redshift_log = 19.93M (32.5%)
+uv_excess_rest = 13.33M (21.7%)
+color_gr = 8.59M (14.0%)
+abs_mag_r = 3.92M (6.4%)
+color_rz = 3.46M (5.6%)
+g = 1.62M (2.6%)
+spectral_type_GALAXY_prob = 1.26M (2.0%)
+z = 1.18M (1.9%)
+coord_x_redshift = 822.17K (1.3%)
+cos_alpha = 740.69K (1.2%)
+uv_excess = 718.57K (1.2%)
+color_ug = 711.78K (1.2%)
+u = 652.21K (1.1%)
+delta = 608.75K (1.0%)
+sin_alpha = 568.82K (0.9%)
+i = 566.84K (0.9%)
+cos_delta = 554.45K (0.9%)
+color_ri = 529.55K (0.9%)
+coord_dist = 454.78K (0.7%)
+spectral_type_QSO_prob = 428.67K (0.7%)
+alpha = 320.29K (0.5%)
+r = 274.13K (0.4%)
+sin_delta = 92.01K (0.1%)
+alpha_bin = 21.69K (0.0%)
+delta_bin = 21.69K (0.0%)
+spectral_type_STAR_prob = 8.67K (0.0%)
+galaxy_population_GALAXY_prob = 6.26K (0.0%)
+galaxy_population_QSO_prob = 256.07 (0.0%)
+galaxy_population_STAR_prob = 36.76 (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 364109 | 4724 | 8647
+QSO | 2120 | 113921 | 1102
+STAR | 3016 | 462 | 79246","GALAXY: 0.9646 (364109/377480)
+QSO: 0.9725 (113921/117143)
+STAR: 0.9580 (79246/82724)
+BalAcc: 0.9650"
+2026-06-10 09:33:19,,LightGBM,"Mean BalAcc = 0.9635 ± 0.0010
+Min = 0.9624
+Max = 0.9652
+OOF BalAcc = 0.9635
+Time (sec) = 138.3","redshift_log = 3586
+abs_mag_r = 2806
+sin_alpha = 2799
+delta = 2792
+u = 2722
+color_rz = 2714
+color_ug = 2665
+cos_delta = 2587
+color_gr = 2584
+cos_alpha = 2512
+z = 2306
+g = 2270
+coord_x_redshift = 2257
+color_ri = 2081
+i = 2049
+r = 1762
+coord_dist = 1679
+alpha = 1675
+sin_delta = 520
+spectral_type_STAR_prob = 129
+delta_bin = 122
+spectral_type_GALAXY_prob = 92
+galaxy_population_GALAXY_prob = 68
+alpha_bin = 67
+spectral_type_QSO_prob = 59
+galaxy_population_QSO_prob = 38
+galaxy_population_STAR_prob = 11","i = 114.47M (12.1%)
+z = 113.45M (12.0%)
+color_ri = 76.88M (8.1%)
+abs_mag_r = 71.65M (7.6%)
+color_ug = 69.91M (7.4%)
+cos_alpha = 57.36M (6.1%)
+redshift_log = 54.23M (5.7%)
+delta = 53.47M (5.7%)
+cos_delta = 50.78M (5.4%)
+sin_alpha = 44.37M (4.7%)
+color_rz = 43.94M (4.6%)
+u = 36.92M (3.9%)
+r = 36.89M (3.9%)
+coord_dist = 33.85M (3.6%)
+g = 28.13M (3.0%)
+coord_x_redshift = 22.15M (2.3%)
+color_gr = 15.33M (1.6%)
+alpha = 13.94M (1.5%)
+sin_delta = 3.62M (0.4%)
+spectral_type_STAR_prob = 1.60M (0.2%)
+spectral_type_QSO_prob = 957.68K (0.1%)
+delta_bin = 505.67K (0.1%)
+alpha_bin = 440.03K (0.0%)
+spectral_type_GALAXY_prob = 331.09K (0.0%)
+galaxy_population_GALAXY_prob = 96.02K (0.0%)
+galaxy_population_QSO_prob = 20.88K (0.0%)
+galaxy_population_STAR_prob = 8.31K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+reg_alpha = 0.0
+reg_lambda = 0.0
+subsample = 0.8","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 359956 | 5845 | 11679
+QSO | 2048 | 113857 | 1238
+STAR | 2436 | 465 | 79823","GALAXY: 0.9536 (359956/377480)
+QSO: 0.9719 (113857/117143)
+STAR: 0.9649 (79823/82724)
+BalAcc: 0.9635"
+2026-06-10 10:05:56,,LightGBM,"Mean BalAcc = 0.9635 ± 0.0010
+Min = 0.9624
+Max = 0.9652
+OOF BalAcc = 0.9635
+Time (sec) = 129.2","redshift_log = 3586
+abs_mag_r = 2806
+sin_alpha = 2799
+delta = 2792
+u = 2722
+color_rz = 2714
+color_ug = 2665
+cos_delta = 2587
+color_gr = 2584
+cos_alpha = 2512
+z = 2306
+g = 2270
+coord_x_redshift = 2257
+color_ri = 2081
+i = 2049
+r = 1762
+coord_dist = 1679
+alpha = 1675
+sin_delta = 520
+spectral_type_STAR_prob = 129
+delta_bin = 122
+spectral_type_GALAXY_prob = 92
+galaxy_population_GALAXY_prob = 68
+alpha_bin = 67
+spectral_type_QSO_prob = 59
+galaxy_population_QSO_prob = 38
+galaxy_population_STAR_prob = 11","i = 114.47M (12.1%)
+z = 113.45M (12.0%)
+color_ri = 76.88M (8.1%)
+abs_mag_r = 71.65M (7.6%)
+color_ug = 69.91M (7.4%)
+cos_alpha = 57.36M (6.1%)
+redshift_log = 54.23M (5.7%)
+delta = 53.47M (5.7%)
+cos_delta = 50.78M (5.4%)
+sin_alpha = 44.37M (4.7%)
+color_rz = 43.94M (4.6%)
+u = 36.92M (3.9%)
+r = 36.89M (3.9%)
+coord_dist = 33.85M (3.6%)
+g = 28.13M (3.0%)
+coord_x_redshift = 22.15M (2.3%)
+color_gr = 15.33M (1.6%)
+alpha = 13.94M (1.5%)
+sin_delta = 3.62M (0.4%)
+spectral_type_STAR_prob = 1.60M (0.2%)
+spectral_type_QSO_prob = 957.68K (0.1%)
+delta_bin = 505.67K (0.1%)
+alpha_bin = 440.03K (0.0%)
+spectral_type_GALAXY_prob = 331.09K (0.0%)
+galaxy_population_GALAXY_prob = 96.02K (0.0%)
+galaxy_population_QSO_prob = 20.88K (0.0%)
+galaxy_population_STAR_prob = 8.31K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+reg_alpha = 0.0
+reg_lambda = 0.0
+subsample = 0.8","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 359956 | 5845 | 11679
+QSO | 2048 | 113857 | 1238
+STAR | 2436 | 465 | 79823","GALAXY: 0.9536 (359956/377480)
+QSO: 0.9719 (113857/117143)
+STAR: 0.9649 (79823/82724)
+BalAcc: 0.9635"
+2026-06-10 10:18:10,,LightGBM,"Mean BalAcc = 0.9635 ± 0.0010
+Min = 0.9624
+Max = 0.9652
+OOF BalAcc = 0.9635
+Time (sec) = 129.3","redshift_log = 3586
+abs_mag_r = 2806
+sin_alpha = 2799
+delta = 2792
+u = 2722
+color_rz = 2714
+color_ug = 2665
+cos_delta = 2587
+color_gr = 2584
+cos_alpha = 2512
+z = 2306
+g = 2270
+coord_x_redshift = 2257
+color_ri = 2081
+i = 2049
+r = 1762
+coord_dist = 1679
+alpha = 1675
+sin_delta = 520
+spectral_type_STAR_prob = 129
+delta_bin = 122
+spectral_type_GALAXY_prob = 92
+galaxy_population_GALAXY_prob = 68
+alpha_bin = 67
+spectral_type_QSO_prob = 59
+galaxy_population_QSO_prob = 38
+galaxy_population_STAR_prob = 11","i = 114.47M (12.1%)
+z = 113.45M (12.0%)
+color_ri = 76.88M (8.1%)
+abs_mag_r = 71.65M (7.6%)
+color_ug = 69.91M (7.4%)
+cos_alpha = 57.36M (6.1%)
+redshift_log = 54.23M (5.7%)
+delta = 53.47M (5.7%)
+cos_delta = 50.78M (5.4%)
+sin_alpha = 44.37M (4.7%)
+color_rz = 43.94M (4.6%)
+u = 36.92M (3.9%)
+r = 36.89M (3.9%)
+coord_dist = 33.85M (3.6%)
+g = 28.13M (3.0%)
+coord_x_redshift = 22.15M (2.3%)
+color_gr = 15.33M (1.6%)
+alpha = 13.94M (1.5%)
+sin_delta = 3.62M (0.4%)
+spectral_type_STAR_prob = 1.60M (0.2%)
+spectral_type_QSO_prob = 957.68K (0.1%)
+delta_bin = 505.67K (0.1%)
+alpha_bin = 440.03K (0.0%)
+spectral_type_GALAXY_prob = 331.09K (0.0%)
+galaxy_population_GALAXY_prob = 96.02K (0.0%)
+galaxy_population_QSO_prob = 20.88K (0.0%)
+galaxy_population_STAR_prob = 8.31K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+reg_alpha = 0.0
+reg_lambda = 0.0
+subsample = 0.8","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 359956 | 5845 | 11679
+QSO | 2048 | 113857 | 1238
+STAR | 2436 | 465 | 79823","GALAXY: 0.9536 (359956/377480)
+QSO: 0.9719 (113857/117143)
+STAR: 0.9649 (79823/82724)
+BalAcc: 0.9635"
+2026-06-10 10:29:41,,LightGBM,"Mean BalAcc = 0.9635 ± 0.0010
+Min = 0.9624
+Max = 0.9652
+OOF BalAcc = 0.9635
+Time (sec) = 131.0","redshift_log = 3586
+abs_mag_r = 2806
+sin_alpha = 2799
+delta = 2792
+u = 2722
+color_rz = 2714
+color_ug = 2665
+cos_delta = 2587
+color_gr = 2584
+cos_alpha = 2512
+z = 2306
+g = 2270
+coord_x_redshift = 2257
+color_ri = 2081
+i = 2049
+r = 1762
+coord_dist = 1679
+alpha = 1675
+sin_delta = 520
+spectral_type_STAR_prob = 129
+delta_bin = 122
+spectral_type_GALAXY_prob = 92
+galaxy_population_GALAXY_prob = 68
+alpha_bin = 67
+spectral_type_QSO_prob = 59
+galaxy_population_QSO_prob = 38
+galaxy_population_STAR_prob = 11","i = 114.47M (12.1%)
+z = 113.45M (12.0%)
+color_ri = 76.88M (8.1%)
+abs_mag_r = 71.65M (7.6%)
+color_ug = 69.91M (7.4%)
+cos_alpha = 57.36M (6.1%)
+redshift_log = 54.23M (5.7%)
+delta = 53.47M (5.7%)
+cos_delta = 50.78M (5.4%)
+sin_alpha = 44.37M (4.7%)
+color_rz = 43.94M (4.6%)
+u = 36.92M (3.9%)
+r = 36.89M (3.9%)
+coord_dist = 33.85M (3.6%)
+g = 28.13M (3.0%)
+coord_x_redshift = 22.15M (2.3%)
+color_gr = 15.33M (1.6%)
+alpha = 13.94M (1.5%)
+sin_delta = 3.62M (0.4%)
+spectral_type_STAR_prob = 1.60M (0.2%)
+spectral_type_QSO_prob = 957.68K (0.1%)
+delta_bin = 505.67K (0.1%)
+alpha_bin = 440.03K (0.0%)
+spectral_type_GALAXY_prob = 331.09K (0.0%)
+galaxy_population_GALAXY_prob = 96.02K (0.0%)
+galaxy_population_QSO_prob = 20.88K (0.0%)
+galaxy_population_STAR_prob = 8.31K (0.0%)","class_weight = balanced
+colsample_bytree = 0.8
+learning_rate = 0.1
+max_depth = 8
+min_child_samples = 20
+n_estimators = 500
+num_leaves = 31
+reg_alpha = 0.0
+reg_lambda = 0.0
+subsample = 0.8","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 359956 | 5845 | 11679
+QSO | 2048 | 113857 | 1238
+STAR | 2436 | 465 | 79823","GALAXY: 0.9536 (359956/377480)
+QSO: 0.9719 (113857/117143)
+STAR: 0.9649 (79823/82724)
+BalAcc: 0.9635"
+2026-06-10 13:26:42,0.96639,LightGBM,"Mean BalAcc = 0.9649 ± 0.0003
+Min = 0.9646
+Max = 0.9654
+OOF BalAcc = 0.9649
+Time (sec) = 1401.9","color_rz = 71672
+delta = 69616
+cos_delta = 66450
+sin_alpha = 64410
+cos_alpha = 64024
+redshift_log = 59060
+z = 56857
+u = 56777
+abs_mag_r = 56624
+color_gr = 53599
+g = 51286
+i = 51190
+color_ri = 48839
+color_ug = 48724
+color_gr_rest = 48599
+color_ug_rest = 48598
+r = 44325
+coord_x_redshift = 43894
+color_ri_rest = 43326
+coord_dist = 35945
+alpha = 33682
+sin_delta = 8700
+spectral_type_STAR_prob = 2781
+delta_bin = 2022
+alpha_bin = 1294
+galaxy_population_GALAXY_prob = 669
+spectral_type_GALAXY_prob = 505
+spectral_type_QSO_prob = 352
+galaxy_population_QSO_prob = 150
+galaxy_population_STAR_prob = 23","redshift_log = 28.18M (45.9%)
+color_gr = 8.59M (14.0%)
+color_ug_rest = 4.68M (7.6%)
+color_rz = 3.46M (5.6%)
+abs_mag_r = 2.97M (4.8%)
+color_gr_rest = 1.49M (2.4%)
+u = 1.38M (2.2%)
+g = 1.25M (2.0%)
+z = 1.23M (2.0%)
+spectral_type_GALAXY_prob = 1.16M (1.9%)
+color_ri_rest = 741.75K (1.2%)
+cos_alpha = 738.83K (1.2%)
+color_ug = 672.28K (1.1%)
+delta = 606.09K (1.0%)
+i = 590.82K (1.0%)
+sin_alpha = 573.57K (0.9%)
+cos_delta = 562.96K (0.9%)
+coord_x_redshift = 527.03K (0.9%)
+spectral_type_QSO_prob = 421.21K (0.7%)
+coord_dist = 413.95K (0.7%)
+color_ri = 343.90K (0.6%)
+r = 317.91K (0.5%)
+alpha = 305.06K (0.5%)
+sin_delta = 78.64K (0.1%)
+galaxy_population_GALAXY_prob = 38.20K (0.1%)
+delta_bin = 25.44K (0.0%)
+alpha_bin = 21.38K (0.0%)
+spectral_type_STAR_prob = 9.97K (0.0%)
+galaxy_population_QSO_prob = 6.25K (0.0%)
+galaxy_population_STAR_prob = 3.29K (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 364096 | 4700 | 8684
+QSO | 2130 | 113906 | 1107
+STAR | 3029 | 467 | 79228","GALAXY: 0.9645 (364096/377480)
+QSO: 0.9724 (113906/117143)
+STAR: 0.9577 (79228/82724)
+BalAcc: 0.9649"
+2026-06-10 14:25:23,0.96722,LightGBM,"Mean BalAcc = 0.9648 ± 0.0003
+Min = 0.9644
+Max = 0.9652
+OOF BalAcc = 0.9648
+Time (sec) = 1394.2","color_rz = 72712
+color_ug = 71488
+delta = 70261
+color_gr = 68209
+cos_delta = 67335
+cos_alpha = 65490
+sin_alpha = 62951
+u = 61530
+redshift_log = 61012
+abs_mag_r = 59366
+color_ri = 57969
+z = 57235
+i = 53085
+g = 50955
+coord_x_redshift = 45281
+r = 43699
+d4000_proxy = 40696
+coord_dist = 36316
+d4000_proxy_rest = 35566
+alpha = 34052
+sin_delta = 9774
+spectral_type_STAR_prob = 3012
+delta_bin = 2008
+alpha_bin = 1225
+spectral_type_GALAXY_prob = 1154
+galaxy_population_GALAXY_prob = 832
+spectral_type_QSO_prob = 567
+galaxy_population_QSO_prob = 202
+galaxy_population_STAR_prob = 18","redshift_log = 28.91M (47.1%)
+color_gr = 8.98M (14.6%)
+abs_mag_r = 4.48M (7.3%)
+color_rz = 3.56M (5.8%)
+color_ug = 2.88M (4.7%)
+z = 1.77M (2.9%)
+g = 1.76M (2.9%)
+u = 1.51M (2.5%)
+spectral_type_GALAXY_prob = 1.27M (2.1%)
+cos_alpha = 745.73K (1.2%)
+i = 673.01K (1.1%)
+coord_x_redshift = 625.97K (1.0%)
+delta = 607.43K (1.0%)
+sin_alpha = 567.21K (0.9%)
+cos_delta = 563.15K (0.9%)
+color_ri = 458.10K (0.7%)
+spectral_type_QSO_prob = 430.73K (0.7%)
+coord_dist = 405.39K (0.7%)
+r = 324.78K (0.5%)
+alpha = 311.86K (0.5%)
+d4000_proxy = 190.80K (0.3%)
+d4000_proxy_rest = 157.26K (0.3%)
+sin_delta = 91.65K (0.1%)
+galaxy_population_GALAXY_prob = 50.48K (0.1%)
+delta_bin = 24.93K (0.0%)
+alpha_bin = 22.94K (0.0%)
+spectral_type_STAR_prob = 10.66K (0.0%)
+galaxy_population_QSO_prob = 6.97K (0.0%)
+galaxy_population_STAR_prob = 278.88 (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 364088 | 4721 | 8671
+QSO | 2142 | 113874 | 1127
+STAR | 3019 | 464 | 79241","GALAXY: 0.9645 (364088/377480)
+QSO: 0.9721 (113874/117143)
+STAR: 0.9579 (79241/82724)
+BalAcc: 0.9648"
+2026-06-11 10:10:07,0.96803,LightGBM,"Mean BalAcc = 0.9652 ± 0.0004
+Min = 0.9646
+Max = 0.9656
+OOF BalAcc = 0.9652
+Time (sec) = 1403.9","color_gr = 75554
+color_rz = 73037
+color_ug = 72956
+color_ri = 67256
+delta = 66180
+redshift_log = 62664
+u = 62531
+cos_delta = 62262
+abs_mag_r = 61819
+z = 58856
+coord_x = 54708
+i = 54395
+g = 54214
+coord_y = 49536
+cos_alpha = 46748
+r = 46481
+sin_alpha = 46007
+coord_x_redshift = 45382
+alpha = 27722
+coord_dist = 26987
+sin_delta = 8243
+spectral_type_STAR_prob = 3512
+delta_bin = 1717
+spectral_type_GALAXY_prob = 1573
+alpha_bin = 953
+galaxy_population_GALAXY_prob = 866
+coord_z = 844
+spectral_type_QSO_prob = 677
+galaxy_population_QSO_prob = 251
+galaxy_population_STAR_prob = 33","redshift_log = 29.58M (48.2%)
+color_gr = 9.07M (14.8%)
+abs_mag_r = 4.01M (6.5%)
+color_rz = 3.53M (5.7%)
+color_ug = 2.87M (4.7%)
+z = 1.87M (3.1%)
+g = 1.82M (3.0%)
+u = 1.38M (2.2%)
+spectral_type_GALAXY_prob = 1.25M (2.0%)
+i = 670.13K (1.1%)
+cos_alpha = 569.17K (0.9%)
+delta = 561.04K (0.9%)
+cos_delta = 528.83K (0.9%)
+coord_x_redshift = 523.39K (0.9%)
+color_ri = 494.18K (0.8%)
+coord_x = 453.22K (0.7%)
+spectral_type_QSO_prob = 437.30K (0.7%)
+coord_y = 387.27K (0.6%)
+sin_alpha = 386.23K (0.6%)
+r = 339.86K (0.6%)
+coord_dist = 258.79K (0.4%)
+alpha = 235.15K (0.4%)
+sin_delta = 69.46K (0.1%)
+galaxy_population_GALAXY_prob = 48.40K (0.1%)
+delta_bin = 22.63K (0.0%)
+alpha_bin = 17.25K (0.0%)
+spectral_type_STAR_prob = 11.83K (0.0%)
+coord_z = 8.48K (0.0%)
+galaxy_population_QSO_prob = 7.16K (0.0%)
+galaxy_population_STAR_prob = 3.28K (0.0%)","class_weight = balanced
+colsample_bytree = 0.85
+learning_rate = 0.01
+max_depth = 12
+min_child_samples = 5
+n_estimators = 3000
+num_leaves = 127
+reg_alpha = 0.1
+reg_lambda = 0.1
+subsample = 0.85
+min_gain_to_split = 0.01","FINAL_PARAMS
+v1 winner: color_indices, coord_dist, redshift_log, sin/cos alpha/delta, alpha/delta raw, alpha_bin/delta_bin, coord_x_redshift, target_encoding
++ v2: abs_mag_r only
+- redshift (raw)",,macOS-15.7.7-arm64-arm-64bit-Mach-O,"actual \ pred | GALAXY | QSO | STAR
+GALAXY | 364185 | 4775 | 8520
+QSO | 2108 | 113928 | 1107
+STAR | 3007 | 454 | 79263","GALAXY: 0.9648 (364185/377480)
+QSO: 0.9726 (113928/117143)
+STAR: 0.9582 (79263/82724)
+BalAcc: 0.9652"
